@@ -1,4 +1,4 @@
-git push --set-upstream origin mainname: test
+name: test
 
 on: push
 
