@@ -1,4 +1,4 @@
-git push --set-upstream origin mainname: test
+name: test
 
 on: push
 
@@ -13,19 +13,20 @@ jobs:
         run: date
   job2:
     name: Second Job
-    runs-on: winod
+    runs-on: windows-latest
     steps:
-      -name: Step one
-      run: get-date
+      - name: Step one
+        run: get-date
   job3:
     name: Third Job
     runs-on: macos-latest
     steps:
-      -name: Step one
-      run: date
+      - name: Step one
+        run: date
   job4:
-    name: ubuntu-18.04
+    name: Fourth Job
+    runs-on: ubuntu-18.04
     needs: [job1, job2, job3]
     steps:
-      -name: Step one
-      run: date
+      - name: Step one
+        run: date
